@@ -1,0 +1,5 @@
+# Ignore GCP credentials
+**/gcp-key.json
+
+# Ignore certificate authority components for now
+cert-auth
