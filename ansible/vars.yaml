@@ -1,0 +1,20 @@
+---
+csr:
+  - name: cert-auth
+    CN: "Kubernetes"
+    O: "Kubernetes"
+    OU: "CA"
+
+  - name: admin
+    CN: "admin"
+    O: "system:control-plane"
+    OU: "Kubernetes The Hard Way"
+  
+shared_names: 
+  C: "CA"
+  L: "Montreal"
+  ST: "Quebec"
+
+key: 
+  algo: "rsa"
+  size: "2048"

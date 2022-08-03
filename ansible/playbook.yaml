@@ -1,0 +1,24 @@
+
+- name: TODO
+  hosts: TODO
+  tasks:
+
+  # TODO: generate certs
+  - name: Create a private RSA key
+    community.crypto.openssl_privatekey:
+     path: ../ca.key
+
+  - name: Create a certificate signing request
+    community.crypto.openssl_csr_pipe:
+      privatekey_path: ../ca.pem
+      C: "CA"
+      L: "Montreal"
+      O: "Kubernetes"
+      OU: "CA"
+      ST: "Quebec"
+
+  # TODO: push certs to hosts
+  - name: Copy certificates to nodes
+    ansible.builtin.copy:
+      src: TODO
+      dest: TODO
